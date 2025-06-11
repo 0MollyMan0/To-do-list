@@ -1,13 +1,12 @@
 import React from 'react';
-import './App.css';
+import WelcomeCard from './components/WelcomeCard';
 
 function App() {
   return (
-    <div>
-      <h1>Hello React + TypeScript!</h1>
+    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <WelcomeCard nom="Test" />
     </div>
   );
 }
 
 export default App;
-

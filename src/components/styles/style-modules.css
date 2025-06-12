@@ -1,0 +1,8 @@
+.smooth-hover {
+    transition-property: transform, box-shadow;
+    transition-duration: 250ms;
+  }
+  
+  .smooth-hover:hover {
+    transition-duration: 500ms; /* plus long pour le hover (in) */
+  }

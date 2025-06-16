@@ -1,4 +1,3 @@
-import { useState } from "react";
 
 
 type TodoFormProps = {
@@ -40,5 +39,6 @@ type TodoFormProps = {
     </div>
     )
 };
+
 
 export default TodoForm;

@@ -23,35 +23,76 @@ a:hover {
 }
 
 body {
-  margin: 0;
+  background: linear-gradient(135deg, #0728e1, #3819fe);
   display: flex;
-  place-items: center;
+  justify-content: center;
+  align-items: center;
   min-width: 320px;
   min-height: 100vh;
+  margin: 0;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+    text-align: center;
+    font-size: 3.2em;
+    line-height: 1.1;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 0.6rem;
+}
+
+form {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+input {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+    background-color: #021652;
+    color: rgb(205, 205, 205);
+    margin-left: 20px;
+    padding: 0.5rem 1rem;
+    border: 2px solid #101058;
+    border-radius: 8px;
+    font-size: medium;
 }
 button:hover {
-  border-color: #646cff;
+    color: rgb(255, 255, 255);
+    background-color: #131a79;
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+.container {
+    background: rgb(12, 16, 36);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+    max-width: 400px;
+}
+
+.button-delete {
+    font-weight: bold;
 }
 
 @media (prefers-color-scheme: light) {

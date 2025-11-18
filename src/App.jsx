@@ -1,36 +1,38 @@
 import { useRef, useState } from "react";
-import Fruit from "./components/Fruit";
-import FruitForm from "./components/FruitForm";
+import Task from "./components/Task";
+import TaskForm from "./components/TaskForm";
 
 function App() {
   
-  const [fruits, setFruits] = useState([
-    { id: 1, nom: "Abricots" },
-    { id: 2, nom: "Bananes" },
-    { id: 3, nom: "Cerises" },
+  const [tasks, setTasks] = useState([
+    { id: 1, nom: "Task Example" },
   ]);
 
   const handleDelete = (id) => {
-    const fruitsCopy = [...fruits];
-    const fruitsCopyUpdated = fruitsCopy.filter((fruit) => fruit.id !== id);
-    setFruits(fruitsCopyUpdated);
+    const tasksCopy = [...tasks];
+    const tasksCopyUpdated = tasksCopy.filter((task) => task.id !== id);
+    setTasks(tasksCopyUpdated);
   };
 
-  const handleAdd = (addFruit) => {
-      const fruitsCopy = [...fruits];
-      fruitsCopy.push(addFruit);
-      setFruits(fruitsCopy);
+  const handleAdd = (addtask) => {
+      const tasksCopy = [...tasks];
+      tasksCopy.push(addtask);
+      setTasks(tasksCopy);
   }
 
   return (
-    <div>
-      <h1>Liste de fruits</h1>
+    <div className="container">
+      <h1>To-do-list</h1>
       <ul>
-        {fruits.map((fruit) => {
-          return <Fruit fruitInfo={fruit} onFruitDelete={handleDelete} />;
-        })}
+        {tasks.map((task) => (
+          <Task 
+            taskInfo={task} 
+            onTaskDelete={handleDelete}
+            key={task.id} 
+          />
+        ))}
       </ul>
-      <FruitForm handleAdd={handleAdd}/>
+      <TaskForm handleAdd={handleAdd}/>
     </div>
   );
 }

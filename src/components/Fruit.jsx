@@ -1,10 +1,4 @@
-export default function Fruit(props) {
-  //state
-  const fruitInfo = props.fruitInfo;
-  const onFruitDelete = props.onFruitDelete;
-  // comportements
-
-  // affichage
+export default function Fruit({fruitInfo, onFruitDelete}) {
   return (
     <li key={fruitInfo.id}>
       {fruitInfo.nom}
